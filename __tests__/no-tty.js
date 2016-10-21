@@ -1,10 +1,8 @@
 'use strict'
 
-const notify = require('../index.js').notify
+const clearRequire = require('clear-require')
 
-function clearRequire (id) {
-  delete require.cache[id]
-}
+const notify = require('../index.js').notify
 
 // mock console.error
 let oldConsoleError

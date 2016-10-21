@@ -1,12 +1,9 @@
 'use strict'
 
+const clearRequire = require('clear-require')
 const stripAnsi = require('strip-ansi')
 
 const notify = require('../index.js').notify
-
-function clearRequire (id) {
-  delete require.cache[id]
-}
 
 // mock console.error
 let oldConsoleError

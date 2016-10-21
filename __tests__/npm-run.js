@@ -1,10 +1,8 @@
 'use strict'
 
-const notify = require('../index.js').notify
+const clearRequire = require('clear-require')
 
-function clearRequire (id) {
-  delete require.cache[id]
-}
+const notify = require('../index.js').notify
 
 // mock console.error
 let oldConsoleError
@@ -25,7 +23,6 @@ afterEach(function () {
 })
 
 test('notify({ message: "hello, world!" })', () => {
-  expect(require('is-npm')).toBe(true)
   console.error = jest.fn()
   notify({ message: 'hello, world!' })
   expect(console.error).not.toBeCalled()
