@@ -1,4 +1,4 @@
-exports[`test notify({ message: "hello, world!" }) 1`] = `
+exports[`test notify({ message: "hello, world!", defer: true }) 1`] = `
 "
 
    ╭───────────────────╮

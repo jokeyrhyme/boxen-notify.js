@@ -25,6 +25,7 @@ afterEach(function () {
 })
 
 test('notify({ message: "hello, world!" })', () => {
+  expect(require('is-npm')).toBe(true)
   console.error = jest.fn()
   notify({ message: 'hello, world!' })
   expect(console.error).not.toBeCalled()
