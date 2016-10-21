@@ -6,18 +6,17 @@ const stripAnsi = require('strip-ansi')
 const notify = require('../index.js').notify
 
 // mock console.error
-let oldConsoleError
+let oldConsoleError = console.error
 afterEach(() => {
   console.error = oldConsoleError
 })
 
 // mock interactive terminal and non-`npm run`-environment
 let processEnvBefore
-let isTTYBefore
+let isTTYBefore = process.stdout.isTTY
 beforeEach(function () {
   ['is-npm'].forEach(clearRequire)
   processEnvBefore = JSON.stringify(process.env)
-  isTTYBefore = process.stdout.isTTY
   ;['npm_config_username', 'npm_package_name', 'npm_config_heading'].forEach(function (name) {
     delete process.env[name]
   })
