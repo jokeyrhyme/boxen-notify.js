@@ -1,4 +1,4 @@
-# boxen-notify [![npm](https://img.shields.io/npm/v/boxen-notify.js.svg?maxAge=2592000)](https://www.npmjs.com/package/boxen-notify.js)
+# boxen-notify [![npm](https://img.shields.io/npm/v/boxen-notify.svg?maxAge=2592000)](https://www.npmjs.com/package/boxen-notify) [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/d6tm9xe9jt8839am?svg=true)](https://ci.appveyor.com/project/jokeyrhyme/boxen-notify-js) [![Travis CI Status](https://travis-ci.org/jokeyrhyme/boxen-notify.js.svg?branch=master)](https://travis-ci.org/jokeyrhyme/boxen-notify.js)
 
 show a message in a box (extracted from update-notifier)
 
