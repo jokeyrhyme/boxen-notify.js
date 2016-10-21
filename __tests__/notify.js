@@ -12,11 +12,10 @@ afterEach(() => {
 })
 
 // mock interactive terminal and non-`npm run`-environment
-let processEnvBefore
+let processEnvBefore = JSON.stringify(process.env)
 let isTTYBefore = process.stdout.isTTY
 beforeEach(function () {
   ['is-npm'].forEach(clearRequire)
-  processEnvBefore = JSON.stringify(process.env)
   ;['npm_config_username', 'npm_package_name', 'npm_config_heading'].forEach(function (name) {
     delete process.env[name]
   })
