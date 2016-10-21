@@ -1,20 +1,11 @@
 {
   "name": "boxen-notify",
-  "version": "1.0.0",
   "description": "show a message in a box (extracted from update-notifier)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint --fix --cache .",
-    "flow_check": "flow check || exit 0",
-    "fixpack": "fixpack"
-  },
-  "keywords": [],
+  "version": "1.0.0",
   "author": "Ron Waldon <jokeyrhyme@gmail.com> (https://github.com/jokeyrhyme)",
-  "license": "MIT",
-  "engines": {
-    "node": ">=6",
-    "npm": ">=3"
+  "dependencies": {
+    "boxen": "^0.8.1",
+    "is-npm": "1.0.0"
   },
   "devDependencies": {
     "eslint": "^3.8.1",
@@ -23,6 +14,34 @@
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-standard": "^2.0.1",
     "fixpack": "^2.3.1",
-    "flow-bin": "^0.33.0"
+    "flow-bin": "^0.33.0",
+    "jest": "^16.0.2",
+    "strip-ansi": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=4",
+    "npm": ">=3"
+  },
+  "files": [
+    "index.js"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "lines": 90
+      }
+    }
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --fix --cache .",
+    "fixpack": "fixpack",
+    "flow_check": "flow check",
+    "jest": "jest",
+    "posttest": "npm run eslint && npm run flow_check && npm run fixpack",
+    "test": "npm run jest"
   }
 }

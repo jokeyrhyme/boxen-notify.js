@@ -6,5 +6,8 @@
   ],
   "plugins": [
     "node"
-  ]
+  ],
+  "rules": {
+    "no-console": 0
+  }
 }

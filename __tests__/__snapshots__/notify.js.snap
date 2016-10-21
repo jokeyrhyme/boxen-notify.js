@@ -1,0 +1,10 @@
+exports[`test notify({ message: "hello, world!" }) 1`] = `
+"
+
+   ╭───────────────────╮
+   │                   │
+   │   hello, world!   │
+   │                   │
+   ╰───────────────────╯
+"
+`;
