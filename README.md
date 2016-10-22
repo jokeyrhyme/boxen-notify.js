@@ -45,7 +45,7 @@ npm test
 ```
 
 
-## Resources
+## See Also
 
 -   [boxen](https://github.com/sindresorhus/boxen)
 
