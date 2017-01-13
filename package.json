@@ -7,7 +7,7 @@
     "url": "https://github.com/jokeyrhyme/boxen-notify.js/issues"
   },
   "dependencies": {
-    "boxen": "^0.8.1",
+    "boxen": "^1.0.0",
     "is-npm": "1.0.0"
   },
   "devDependencies": {
