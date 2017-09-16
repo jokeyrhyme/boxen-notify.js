@@ -1,11 +1,12 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:node/recommended",
-    "standard"
+    "plugin:node/recommended"
   ],
   "plugins": [
-    "node"
+    "node",
+    "import",
+    "promise"
   ],
   "rules": {
     "no-console": 0

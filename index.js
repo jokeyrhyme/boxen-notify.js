@@ -1,5 +1,5 @@
 /* @flow */
-'use strict'
+'use strict';
 
 /* ::
 type BoxenOptions = { [id:string]: any }
@@ -14,42 +14,42 @@ type BoxenNotifyOptions = {
 
 // https://github.com/yeoman/update-notifier/blob/v1.0.2/index.js#L104
 
-function notify (opts /* : BoxenNotifyOptions */) {
-  const isNpm = require('is-npm')
+function notify(opts /* : BoxenNotifyOptions */) {
+  const isNpm = require('is-npm');
   if (!process.stdout.isTTY || isNpm) {
-    return
+    return;
   }
 
-  const boxen = require('boxen')
+  const boxen = require('boxen');
 
-  opts = opts || {}
+  opts = opts || {};
 
-  opts.defer = typeof opts.defer === 'boolean' ? opts.defer : false
-  opts.message = opts.message || ''
+  opts.defer = typeof opts.defer === 'boolean' ? opts.defer : false;
+  opts.message = opts.message || '';
 
   opts.boxenOpts = opts.boxenOpts || {
     padding: 1,
     margin: 1,
     align: 'center',
     borderColor: 'yellow',
-    borderStyle: 'round'
-  }
+    borderStyle: 'round',
+  };
 
-  const message = '\n' + boxen(opts.message, opts.boxenOpts)
+  const message = '\n' + boxen(opts.message, opts.boxenOpts);
 
   if (opts.defer === false) {
-    console.error(message)
+    console.error(message);
   } else {
-    process.on('exit', function () {
-      console.error(message)
-    })
+    process.on('exit', function() {
+      console.error(message);
+    });
 
-    process.on('SIGINT', function () {
-      console.error('\n' + message)
-    })
+    process.on('SIGINT', function() {
+      console.error('\n' + message);
+    });
   }
 }
 
 module.exports = {
-  notify
-}
+  notify,
+};

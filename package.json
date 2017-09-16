@@ -1,36 +1,55 @@
 {
   "name": "boxen-notify",
-  "description": "show a message in a box (extracted from update-notifier)",
   "version": "1.0.0",
-  "author": "Ron Waldon <jokeyrhyme@gmail.com> (https://github.com/jokeyrhyme)",
+  "description": "show a message in a box (extracted from update-notifier)",
+  "keywords": [],
+  "homepage": "https://github.com/jokeyrhyme/boxen-notify.js#readme",
   "bugs": {
     "url": "https://github.com/jokeyrhyme/boxen-notify.js/issues"
+  },
+  "license": "MIT",
+  "author": "Ron Waldon <jokeyrhyme@gmail.com> (https://github.com/jokeyrhyme)",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokeyrhyme/boxen-notify.js.git"
+  },
+  "scripts": {
+    "eslint": "eslint --fix --cache .",
+    "flow": "npx -q flow-bin@^0.54.1 check",
+    "jest": "jest",
+    "nsp": "npx -q nsp check",
+    "sort-package-json": "npx -q sort-package-json",
+    "pretest": "npm run prettier && npm run eslint && npm run sort-package-json",
+    "test": "npm run jest && npm run nsp && npm run flow",
+    "prettier": "npx -q prettier --list-different --write \"{,!(build|coverage|dist|flow-typed|typings|vendor)/**/}*.{css,js,jsx,less,scss,ts,tsx}\" || exit 0"
   },
   "dependencies": {
     "boxen": "^1.0.0",
     "is-npm": "1.0.0"
   },
   "devDependencies": {
-    "clear-require": "^2.0.0",
     "eslint": "^4.0.0",
-    "eslint-config-standard": "^10.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.0",
-    "fixpack": "^2.3.1",
-    "flow-bin": "^0.54.0",
-    "jest": "^20.0.0",
+    "jest": "^21.1.0",
+    "npx": "^9.6.0",
     "strip-ansi": "^4.0.0"
   },
   "engines": {
     "node": ">=4",
     "npm": ">=3"
   },
-  "files": [
-    "index.js"
+  "eslintIgnore": [
+    "flow-typed",
+    ".eslintcache",
+    ".nyc_output",
+    "coverage"
   ],
-  "homepage": "https://github.com/jokeyrhyme/boxen-notify.js#readme",
   "jest": {
     "collectCoverage": true,
     "coverageThreshold": {
@@ -39,20 +58,8 @@
       }
     }
   },
-  "keywords": [],
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jokeyrhyme/boxen-notify.js.git"
-  },
-  "scripts": {
-    "eslint": "eslint --fix --cache .",
-    "fixpack": "fixpack",
-    "flow_check": "flow check",
-    "jest": "jest",
-    "posttest": "npm run eslint && npm run flow_check",
-    "pretest": "npm run fixpack",
-    "test": "npm run jest"
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }
