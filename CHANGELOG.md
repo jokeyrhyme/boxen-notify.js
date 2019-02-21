@@ -9,4 +9,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- dropped support for Node.js 4.x and older, require 6.x or newer
+- dropped support for Node.js 7.x and older, require 8.x or newer
