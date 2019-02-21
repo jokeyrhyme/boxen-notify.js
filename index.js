@@ -28,9 +28,9 @@ function notify(opts /* : BoxenNotifyOptions */) {
   opts.message = opts.message || '';
 
   opts.boxenOpts = opts.boxenOpts || {
-    padding: 1,
-    margin: 1,
-    align: 'center',
+    padding:     1,
+    margin:      1,
+    align:       'center',
     borderColor: 'yellow',
     borderStyle: 'round',
   };
