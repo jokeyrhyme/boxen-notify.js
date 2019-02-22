@@ -48,7 +48,7 @@
     }
   },
   "dependencies": {
-    "boxen": "^1.0.0",
+    "boxen": "^3.0.0",
     "is-npm": "^2.0.0"
   },
   "devDependencies": {
