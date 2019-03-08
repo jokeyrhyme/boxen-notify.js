@@ -58,7 +58,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "flow-bin": "^0.94.0",
     "jest": "^24.1.0",
-    "strip-ansi": "^5.0.0"
+    "strip-ansi": "^5.1.0"
   },
   "engines": {
     "node": ">=8",
